@@ -10,6 +10,30 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  display: flex;
+  justify-content: center;
+  margin: 32px; /* good but also margin-bottom is enough in this case */
+}
+
+.text {
+  text-align: center;  /* good, but could have been done within body */
+  display: flex; /* if it is done within body it is not needed */
+  flex-wrap: wrap;
+}
+
+.plants {
+  display: flex; /* good */
+  align-items: center;
+  justify-content: center; /* good */
+  gap: 52px; /* good */
+}
+
+.barberry, .saffron, .chili, .pepper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 200px; 
+  gap: 5px;
 }
 
 /* do not edit this footer */
@@ -24,3 +48,8 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/* conclusion: good overall, does the job fine, but could have been done simpler,
+let's focus on editing the already existing css elements first
+such as body, title etc. plus instead of creating containers for the items individually,
+they could all receive the same container too. */

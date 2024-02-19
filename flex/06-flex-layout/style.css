@@ -5,6 +5,11 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 img {
@@ -16,6 +21,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+
+  padding: 10px;
 }
 
 input {
@@ -24,4 +31,38 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+
+.header, .footer {
+  display: flex;
+  padding: 10px;
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 12px;
+  margin: 0; /* was missing */
+  padding: 0; /* was missing */
+}
+
+.content {
+  display: flex;
+  flex: 1; /* was missing, but solution was fine */
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(59, 58, 58, 0.802);
 }
